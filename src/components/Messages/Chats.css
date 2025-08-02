@@ -1,0 +1,204 @@
+.chat-app-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.chat-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    z-index: 10;
+}
+
+
+.chat-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-user-info {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.chat-user-info img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-user-info .username {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.verified-icon {
+    margin-top: 1px;
+    height: 12px;
+    width: 12px;
+}
+
+.chat-header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.video-call-button,
+.options-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 15px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+
+.messages-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    max-width: 70%;
+    gap: 10px;
+}
+
+.my-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.their-message {
+    align-self: flex-start;
+}
+
+.message-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message-content p {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 18px;
+}
+
+.my-message .message-content p {
+    background-color: #0095f6;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.their-message .message-content p {
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 0;
+    border: 1px solid #dbdbdb;
+}
+
+.message-image {
+    max-width: 250px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+
+.message-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.timestamp {
+    font-size: 10px;
+    color: #8e8e8e;
+}
+
+.message-input-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #dbdbdb;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+
+
+.emoji-button,
+.send-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #262626;
+}
+
+.send-button:disabled {
+    opacity: 0.5;
+}
+
+.message-input-container input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 22px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fafafa;
+}

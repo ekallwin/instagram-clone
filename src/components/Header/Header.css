@@ -1,0 +1,24 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.instagram-logo {
+  height: 30px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-icons i {
+  font-size: 22px;
+  color: #262626;
+}

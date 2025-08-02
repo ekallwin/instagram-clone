@@ -1,0 +1,144 @@
+.post-detail-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.post-detail-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+
+.post-detail-header button {
+    background: none;
+    border: none;
+    margin-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.post-detail-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post-detail-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-detail-image {
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.post-detail-image img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;
+}
+
+.post-detail-user {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.post-detail-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.post-detail-comments {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 16px;
+    max-height: 400px;
+}
+
+.post-comment {
+    margin: 8px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-comment strong {
+    margin-right: 5px;
+}
+
+.post-detail-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.post-actions-left {
+    display: flex;
+    gap: 16px;
+}
+
+.post-detail-actions svg {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.post-detail-likes {
+    font-weight: 600;
+    padding: 0 16px 8px;
+}
+
+.post-detail-caption {
+    padding: 0 16px 8px;
+    margin-bottom: 8px;
+}
+
+.post-detail-caption strong {
+    margin-right: 5px;
+}
+
+.post-detail-add-comment {
+    display: flex;
+    border-top: 1px solid #dbdbdb;
+    padding: 16px;
+}
+
+.post-detail-add-comment input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.post-detail-add-comment button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-detail-add-comment button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .post-detail-image {
+        border-bottom: none;
+    }
+}

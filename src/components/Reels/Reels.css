@@ -1,0 +1,177 @@
+:root {
+  --bottom-component-height: 60px;
+  --bottom-gap: 10px;
+  --bottom-offset: calc(var(--bottom-component-height) + var(--bottom-gap));
+}
+
+.reels-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: calc(100vh - var(--bottom-component-height) - var(--bottom-gap));
+  margin: 0 auto;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.loading {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.reels-scroll-container {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.reel-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reel-sidebar {
+  position: absolute;
+  right: 10px;
+  bottom: 80px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.reel-bottom-bar {
+  position: absolute;
+  bottom: 80px; 
+  left: 10px;
+  color: #fff;
+  z-index: 1;
+  max-width: calc(100% - 120px);
+}
+
+.icon-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.icon-text {
+  font-size: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.music-icon {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.music-text {
+  font-size: 12px;
+}
+
+.tap-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1000;
+  animation: fadeOut 4s forwards;
+}
+
+.reel-header-text {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 468px) {
+  .icon {
+    font-size: 24px;
+  }
+}

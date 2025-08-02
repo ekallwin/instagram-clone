@@ -1,0 +1,380 @@
+.story-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.story-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 2;
+}
+
+.story-user-info.clickable-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.story-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.story-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.username-1 {
+    color: white !important;
+    margin-top: 13px !important;
+}
+
+.story-timestamp {
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.clickable-profile {
+    cursor: pointer;
+}
+
+.story-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.close-story {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.story-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.full-story-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.storytime {
+    font-size: 13px;
+}
+
+.story-progress-container {
+    width: calc(100% - 20px);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+}
+
+.story-progress-bar {
+    flex: 1;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.story-progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    transition: width 0.1s linear;
+}
+
+.story-time {
+    margin-left: auto;
+}
+
+.story-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.story-nav-prev {
+    width: 50%;
+    height: 100%;
+}
+
+.story-nav-next {
+    width: 50%;
+    height: 100%;
+}
+
+.pause-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    opacity: 0.8;
+}
+
+.story-modal-overlay {
+    touch-action: manipulation;
+}
+
+.story-progress-fill {
+    transition: width 0.05s linear;
+}
+
+.story-progress-fill.paused {
+    animation-play-state: paused;
+}
+
+/* Story Footer Styles */
+.story-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    z-index: 2;
+}
+
+.story-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px !important;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.story-action-input {
+    flex: 1;
+    display: flex;
+    background: black; 
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+
+.story-action-input input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.story-action-input input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.story-send-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.story-send-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.story-action-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.story-action-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-action-button:hover {
+    opacity: 0.8;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.story-action-button.liked {
+    animation: heartBeat 0.5s ease;
+    color: #ff3040;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .full-story-image {
+        max-height: 70vh;
+    }
+
+    .story-progress-container {
+        padding: 10px 5px;
+        left: 5px;
+        width: calc(100% - 10px);
+    }
+    
+    .story-footer {
+        bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .story-action-input {
+        padding: 6px 12px;
+    }
+    
+    .story-action-icons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-header {
+        padding: 10px;
+    }
+
+    .story-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .stories-scrollable {
+        gap: 10px;
+    }
+
+    .story-border {
+        width: 60px;
+        height: 60px;
+    }
+
+    .story-image {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .story-footer {
+        bottom: 10px;
+    }
+    
+    .story-action-button {
+        font-size: 18px;
+    }
+    
+    .story-action-input input {
+        font-size: 13px;
+    }
+}
