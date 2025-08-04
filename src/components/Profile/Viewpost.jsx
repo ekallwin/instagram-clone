@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { loadProfiles } from '../data/dataLoader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as solidHeart, faBookmark as solidBookmark, faArrowLeft, faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as solidHeart, faBookmark as solidBookmark, faArrowLeft, faEllipsis, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as regularHeart, faBookmark, faComment } from '@fortawesome/free-regular-svg-icons';
 import Verified from '../Profileverified/Verified';
 import CommentModel from '../Commentmodel/Commentmodel';
+import Bottomnav from '../Bottomnav/Bottomnav'
 import './Viewpost.css';
 
 function PostDetail() {
@@ -75,6 +76,7 @@ function PostDetail() {
     if (!post) return <div>Post not found</div>;
 
     return (
+        <>
         <div className="post-detail-container">
             {showCommentModal && (
                 <CommentModel
@@ -120,6 +122,7 @@ function PostDetail() {
                                 icon={faComment} 
                                 onClick={toggleCommentModal}
                             />
+                            <FontAwesomeIcon icon={faPaperPlane} />
                         </div>
                         <FontAwesomeIcon
                             icon={post.isSaved ? solidBookmark : faBookmark}
@@ -154,6 +157,8 @@ function PostDetail() {
                 </div>
             </div>
         </div>
+        <Bottomnav />
+        </>
     );
 }
 

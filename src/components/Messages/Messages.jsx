@@ -21,7 +21,7 @@ function Message() {
                 setLoading(true);
                 const data = await loadProfiles();
                 const targetProfiles = data.filter(profile =>
-                    [1, 5, 11, 16, 22].includes(profile.id)
+                    [1, 5, 11, 22].includes(profile.id)
                 );
 
                 const sampleMessages = {
@@ -72,22 +72,6 @@ function Message() {
                             text: "Yes, 2pm at the coffee shop works for me",
                             isMe: true,
                             timestamp: '2d'
-                        }
-                    ],
-                    16: [
-                        {
-                            id: 1,
-                            text: "Happy birthday! 🎉",
-                            isMe: false,
-                            timestamp: '1w',
-                            username: 'food_blogger',
-                            avatar: `${import.meta.env.USER_API}/women/33.jpg`
-                        },
-                        {
-                            id: 2,
-                            text: "Thank you so much! 😊",
-                            isMe: true,
-                            timestamp: '1w'
                         }
                     ],
                     22: [
