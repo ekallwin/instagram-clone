@@ -33,19 +33,74 @@ A fast and modern **Instagram clone** built using **Vite** and **React**, integr
 ## 📂 Project Structure
 
 ```
-
-src/
-├── assets/              # Static assets (images, icons)
-├── components/          # Reusable components (e.g., Reels, Story, Message)
-├── data/
-│   ├── dataLoader.js    # Loads data from APIs
-│   └── constants.js     # Static keywords or config
-├── App.jsx              # Main app component
-├── main.jsx             # Vite's entry point
-└── index.css            # Global styles
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+    └── instagram.svg
+├── src
+    ├── App.jsx
+    ├── assets
+    │   └── react.svg
+    ├── components
+    │   ├── Bottomnav
+    │   │   ├── Bottomnav.css
+    │   │   └── Bottomnav.jsx
+    │   ├── Commentmodel
+    │   │   ├── Commentmodel.css
+    │   │   └── Commentmodel.jsx
+    │   ├── Header
+    │   │   ├── Header.css
+    │   │   └── Header.jsx
+    │   ├── Home
+    │   │   ├── Home.css
+    │   │   └── Home.jsx
+    │   ├── Mainpage
+    │   │   └── Mainpage.jsx
+    │   ├── Messages
+    │   │   ├── Chat.jsx
+    │   │   ├── Chats.css
+    │   │   ├── Messages.css
+    │   │   └── Messages.jsx
+    │   ├── Myprofile
+    │   │   ├── Myprofile.css
+    │   │   └── Myprofile.jsx
+    │   ├── NotFound
+    │   │   └── NotFound.jsx
+    │   ├── Notifications
+    │   │   ├── Notifications.css
+    │   │   └── Notifications.jsx
+    │   ├── Posts
+    │   │   ├── Posts.css
+    │   │   └── Posts.jsx
+    │   ├── Profile
+    │   │   ├── Profile.css
+    │   │   ├── Profile.jsx
+    │   │   ├── Viewpost.css
+    │   │   └── Viewpost.jsx
+    │   ├── Profileverified
+    │   │   ├── Profileverified.jsx
+    │   │   └── Verified.jsx
+    │   ├── Reels
+    │   │   ├── Reels.css
+    │   │   └── Reels.jsx
+    │   ├── Search
+    │   │   ├── Search.css
+    │   │   └── Search.jsx
+    │   ├── Stories
+    │   │   ├── Stories.css
+    │   │   └── Stories.jsx
+    │   ├── Story
+    │   │   ├── Story.css
+    │   │   └── Story.jsx
+    │   └── data
+    │   │   └── dataLoader.js
+    ├── index.css
+    └── main.jsx
+├── vercel.json
+└── vite.config.js
 
 ````
-
 ---
 
 ## 🌐 API Integration
